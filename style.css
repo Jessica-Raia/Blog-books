@@ -1,0 +1,175 @@
+@font-face {
+    font-family: Night;
+    src: url(src/January\ Night.ttf);
+}
+
+
+
+body{
+    background-color: rgb(230, 219, 207);
+}
+
+/*GROOT SCHERM*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px 15px;
+    background-color: rgb(205, 109, 92);
+    font-family: Night;
+}
+
+
+.desktop-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.desktop-menu h1 {
+    margin: 0;
+    cursor: pointer;
+    font-size: 25px;
+    padding-inline: 25px;
+}
+
+img{
+    height: 250px;
+    width:auto;
+    border-radius: 15px;
+}
+
+img:hover{
+    cursor: pointer;
+    opacity: 70%;
+    filter: drop-shadow(10px 10px 10px rgb(3, 3, 3));
+}
+
+.img-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 50px;
+    place-self: center;
+    margin-top: 200px;
+    background-color: darksalmon;
+    border-radius: 15px;
+    padding: 20px 20px 20px 20px
+}
+
+.timeline-container {
+    position: relative;
+    width: 80%;
+    margin:50px auto;
+}
+
+.timeline {
+    position: relative;
+    height: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.indicator {
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: 30px;
+    background: red;
+    transition: left 0.1s ease-out;
+}
+
+.milestone {
+    position: absolute;
+    top: -30px;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #555;
+}
+
+.milestone::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 8px;
+    height: 8px;
+    background: #555;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: background 0.3s ease;
+}
+
+.milestone.highlight::before {
+    background: red;
+}
+
+/*----------------------------------------------------------------------*/
+
+/*KLEIN SCHERM*/
+
+/* Mobiele navigatie standaard verbergen */
+.hamburger,.mobile-menu,#menu-toggle {
+    display: none;
+}
+
+/* Responsive menu: alleen tonen op kleine schermen */
+@media (max-width: 768px) {
+    /* Verberg het desktopmenu op mobiel */
+    .desktop-menu {
+        display: none;
+    }
+
+    /* Toon de hamburgerknop */
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        
+    }
+
+    /* Stijl mobiel menu (standaard verborgen) */
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        left: 5px;
+        right: 5px;
+        text-align: center;
+        background-color: darksalmon;
+        border-radius: 50px;
+    }
+
+    .mobile-menu h1 {
+        padding: 10px 10px;
+    }
+
+    /* Toon mobiel menu als checkbox is aangevinkt */
+    #menu-toggle:checked + .hamburger + .mobile-menu {
+        display: flex;
+    
+    }
+
+    img{
+        height: 550px;
+        width:350px;
+        border-radius: 15px;
+    }
+
+
+    .img-wrapper{
+        grid-template-columns: 1fr;
+        background-color: darksalmon;
+        border-radius: 15px;
+        width: 75vw; 
+        row-gap: 250px;
+    
+    }
+
+}
+
