@@ -40,15 +40,11 @@ header {
 
 img{
     height: 250px;
-    width:auto;
+    width:100%;
     border-radius: 15px;
 }
 
-img:hover{
-    cursor: pointer;
-    opacity: 70%;
-    filter: drop-shadow(10px 10px 10px rgb(3, 3, 3));
-}
+
 
 .img-wrapper{
     display: grid;
@@ -56,7 +52,7 @@ img:hover{
     row-gap: 25px;
     column-gap: 50px;
     place-self: center;
-    margin-top: 200px;
+    margin-top: 150px;
     background-color: darksalmon;
     border-radius: 15px;
     padding: 20px 20px 20px 20px
@@ -71,9 +67,9 @@ img:hover{
 .timeline {
     position: relative;
     height: 10px;
-    background: #f3967a;
+    background: #ad6149;
     border-radius: 5px;
-    margin-top: 50px;
+    margin-top: 150px;
     position: relative;
 }
 
@@ -83,15 +79,15 @@ img:hover{
     width: 2px;
     height: 30px;
     background: red;
-    transition: left 0.1s ease-out;
+    transition: left 0.3s ease-out;
 }
 
 .milestone {
     position: absolute;
     top: -30px;
     transform: translateX(-50%);
-    font-size: 14px;
-    color: #f1ac83;
+    font-size: 17px;
+    color: #eb996a;
     font-family: Night;
     font-weight: bold;
     
@@ -114,6 +110,39 @@ img:hover{
     background: red;
 }
 
+.flip-card-back{
+    display: none;
+}
+
+.flip-card-front{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    background-color: #f3c1a4;
+    width: 100%;
+    height:250px;
+    top:0;
+    left:0;
+    transition: 0.5s ease;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    
+}
+
+.overlay p{
+    text-align: center;
+    padding-top: 50%;
+    font-family: Caviar;
+    font-size: 20px;
+}
+
+
+.overlay:hover{
+    opacity:100%;
+}
 
 }
 
@@ -136,13 +165,14 @@ img:hover{
 
     /* Toon de hamburgerknop */
     .hamburger {
-        display: block;
-        
+        display: flex;
+        justify-content: flex-end;
         font-size: 50px;
         cursor: pointer;
         background: rgb(205, 109, 92);
         border: none;
-        
+        border-radius: 8px;
+        padding-right: 10px;
     }
 
     /* Stijl mobiel menu (standaard verborgen) */
@@ -158,6 +188,7 @@ img:hover{
         text-align: center;
         background-color: darksalmon;
         border-radius: 50px;
+        cursor: pointer;
     }
 
     .mobile-menu h1 {
@@ -192,9 +223,8 @@ img:hover{
         width: 75vw; 
         margin-top: 75px;
         padding-bottom:1px;
-        margin-bottom:15px
-        
-        
+        margin-bottom:15px;
+        margin-left: 50px;
     
     }
 
@@ -254,6 +284,7 @@ img:hover{
 .timeline{
     display: none;
 }
+
 
 }
 
