@@ -160,7 +160,11 @@ img{
     
 }
 
+a{
+    text-decoration: none;
+  }
 
+  
 }
 
 
@@ -309,9 +313,13 @@ img{
     display: none;
 }
 
-.myCanvas{
+#book1, #book2{
     display: none;
 }
+
+a{
+    text-decoration: none;
+  }
 
 
 }
