@@ -1,32 +1,75 @@
-let shape;
-let angle = 0;
+const sketch1 = (p) => {
+  let shape;
+  let angle = 0;
 
-function preload() {
-  shape = loadModel ('/assets/oldbook.obj.obj', true)
-}
+  p.preload = function () {
+    shape = p.loadModel('/src/oldbook-obj.obj', true);
+  };
 
-function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
-  noStroke()
-}
+  p.setup = function () {
+    let cnv = p.createCanvas(250, 250, p.WEBGL);
+    cnv.parent("book1");
+    p.noStroke();
+  };
 
-function draw() {
-  background(220);
+  p.draw = function () {
+    p.background('rgba(230, 219, 207, 0)');
+
+    p.rotateY(angle);
+
+    p.pointLight(255, 255, 0);
+    p.pointLight(255, 0, 0, -p.height / 2, -p.width / 2, -1);
+    p.pointLight(255, 0, 0);
+    p.pointLight(255, 255, 0, -p.height / 2, p.width / 2, 1);
+
+    p.scale(0.8);
+    p.rotateY(1);
+    p.rotate(270);
+    p.orbitControl();
+    p.model(shape);
+
+    angle += 0.03;
+  };
+};
+
+new p5(sketch1);
+
+
+
+const sketch2 = (p) => {
+  let shape;
+  let angle = 0;
+
+  p.preload = function () {
+    shape = p.loadModel('/src/oldbook-obj.obj', true);
+  };
+
+  p.setup = function () {
+    let cnv = p.createCanvas(250, 250, p.WEBGL);
+    cnv.parent("book2");
+    p.noStroke();
+  };
+
+  p.draw = function () {
+    p.background('rgba(207, 219, 230, 0)'); // andere kleur achtergrond
+
+    p.rotateX(angle); // andere rotatie
+
+    p.pointLight(0, 255, 255);
+    p.pointLight(255, 100, 0, -p.height / 2, -p.width / 2, -1);
+    p.pointLight(100, 0, 255);
+    p.pointLight(0, 255, 0, -p.height / 2, p.width / 2, 1);
+
+    p.scale(0.6); // andere schaal
+    p.rotateX(1);
+    p.orbitControl();
+    p.model(shape);
+
+    angle += 0.03;
+  };
+};
+
+new p5(sketch2);
+
   
-  //normalMaterial()
-  
-  rotateY(angle)
-  
-  pointLight(255,255,0)
-  pointLight(255,0,0, -height/2, -width/2,-1)
-  pointLight(255,0,0)
-  pointLight(255,255,0, -height/2, width/2,1)
-  
-  //fill('rgb(252, 160, 3)')
-  rotateY(1)
-  rotate(270)
-  orbitControl()
-  model(shape)
-  
-  angle += 0.03
-}
+

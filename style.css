@@ -144,7 +144,26 @@ img{
     opacity:100%;
 }
 
+#book1{
+    
+    position: absolute;
+    top:525px;
+    right:65px
+    
 }
+
+#book2{
+    
+    position: absolute;
+    top:525px;
+    left:65px
+    
+}
+
+
+}
+
+
 
 
 /*----------------------------------------------------------------------*/
@@ -287,6 +306,10 @@ img{
 }
 
 .overlay{
+    display: none;
+}
+
+.myCanvas{
     display: none;
 }
 
