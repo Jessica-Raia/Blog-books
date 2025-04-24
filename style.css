@@ -189,6 +189,7 @@ img{
         background-color: darksalmon;
         border-radius: 50px;
         cursor: pointer;
+        font-family: Caviar;
     }
 
     .mobile-menu h1 {
@@ -282,6 +283,10 @@ img{
 }
 
 .timeline{
+    display: none;
+}
+
+.overlay{
     display: none;
 }
 
