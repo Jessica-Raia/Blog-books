@@ -1,0 +1,41 @@
+@font-face {
+    font-family: Night;
+    src: url(src/January\ Night.ttf);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px 15px;
+    background-color: rgb(205, 109, 92);
+    font-family: Night;
+}
+
+
+.desktop-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.desktop-menu h1 {
+    margin: 0;
+    cursor: pointer;
+    font-size: 25px;
+    padding-inline: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover{
+    color: rgb(107, 47, 47)
+  }
+
+  #about-me {
+    background-color: brown;
+  }
+  
+ 

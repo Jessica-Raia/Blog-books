@@ -170,6 +170,11 @@ a{
     color: rgb(107, 47, 47)
   }
 
+#home{
+    background-color: brown;
+    
+    
+}
   
 }
 
@@ -221,13 +226,13 @@ a{
         font-family: Caviar;
     }
 
-    .mobile-menu a{
+     h1 a{
         text-decoration: none;
         color: black;
   
     }
 
-    .mobile-menu a:hover{
+     h1 a:hover{
         color: rgb(107, 47, 47)
     }
 
