@@ -181,7 +181,7 @@ a{
     margin-top: -15px;
     margin-bottom: -15px;
     cursor: auto;
-    line-height: 50px;
+    line-height: 55px;
 }
 
 
@@ -207,12 +207,6 @@ a{
         display: none;
     }
 
-    .menu-toggle{
-        display: none;
-    }
-
-
-
     /* Toon de hamburgerknop */
     .hamburger {
         display: flex;
@@ -230,7 +224,7 @@ a{
         display: none;
         flex-direction: column;
         position: absolute;
-        z-index: 100;
+        z-index: 1;
         opacity:0.75;
         top: 75px;
         left: 5px;
@@ -256,11 +250,7 @@ a{
         padding: 10px 10px;
     }
 
-    /* Toon mobiel menu als checkbox is aangevinkt */
-    #menu-toggle:checked + .hamburger + .mobile-menu {
-        display: flex;
     
-    }
 
     img{
         height: 550px;
