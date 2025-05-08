@@ -36,6 +36,15 @@ a{
 
   #about-me {
     background-color: brown;
+    margin-top: -15px;
+    margin-bottom: -15px;
   }
+
+  #about-me h1{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
   
  
