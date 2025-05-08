@@ -25,7 +25,7 @@ header {
     padding-inline: 25px;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
   }
@@ -38,13 +38,9 @@ a{
     background-color: brown;
     margin-top: -15px;
     margin-bottom: -15px;
+    line-height: 50px;
   }
 
-  #about-me h1{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-}
+  
   
  

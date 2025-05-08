@@ -180,14 +180,11 @@ a{
     background-color: brown;
     margin-top: -15px;
     margin-bottom: -15px;
-    
+    cursor: auto;
+    line-height: 50px;
 }
 
-#home h1{
-    position: absolute;
-    bottom: -20px;
-    transform: translate(-50%, -50%);
-}
+
 
 }
 
@@ -199,7 +196,7 @@ a{
 /*KLEIN SCHERM*/
 
 /* Mobiele navigatie standaard verbergen */
-.hamburger,.mobile-menu,#menu-toggle {
+.hamburger,.mobile-menu, #menu-toggle {
     display: none;
 }
 
@@ -214,9 +211,7 @@ a{
         display: none;
     }
 
-    .menu-toggle:checked ~ .mobile-menu{
-        display: flex;
-    }
+
 
     /* Toon de hamburgerknop */
     .hamburger {
